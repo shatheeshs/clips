@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="baseAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clips.controller.DashBoardController">
+  <children>
+    <BorderPane layoutX="-6.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <top>
+        <MenuBar BorderPane.alignment="CENTER">
+          <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem fx:id="clearMenuItem" mnemonicParsing="false" text="Clear" />
+                <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" text="Exit" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" text="About" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+      </top>
+      <center>
+        <TableView fx:id="clipBoardData" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+          <columns>
+            <TableColumn fx:id="clipBoardColumnTimeStampData" prefWidth="299.0" text="Time">
+              <cellValueFactory>
+                <PropertyValueFactory property="timeStamp" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="clipBoardColumnData" prefWidth="719.0" text="Clips">
+              <cellValueFactory>
+                <PropertyValueFactory property="data" />
+              </cellValueFactory>
+            </TableColumn>
+          </columns>
+        </TableView>
+      </center>
+    </BorderPane>
+  </children>
+</AnchorPane>
