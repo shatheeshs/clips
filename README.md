@@ -4,5 +4,5 @@ It will record every string based capturing of your clipboard with relevant time
 
 
 
-### Application screenshot
+### Application screenshot - TEST
 ![Alt text](src/main/resources/images/App.png?raw=true "Application Demonstration")
